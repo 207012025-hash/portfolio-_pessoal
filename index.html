@@ -27,6 +27,22 @@
     <section id="projetos">
         <h2>Projetos</h2>
         <p> meus trabalhos e exemplos de design.</p>
+        <section class="projetos">
+  <div class="projeto">Website Moderno</div>
+  <div class="projeto">App Criativo</div>
+  <div class="projeto">Identidade Visual</div>
+
+  <!-- Projetos extras (inicialmente escondidos) -->
+  <div class="projeto extra">Landing Page</div>
+  <div class="projeto extra">Dashboard Interativo</div>
+  <div class="projeto extra">E-commerce</div>
+</section>
+
+<!-- Botão -->
+<div style="text-align:center; margin:20px;">
+  <button id="toggleProjetos">Ver mais projetos</button>
+</div>
+
     </section>
 
     <!-- Seção Contato -->
@@ -41,5 +57,23 @@
     <footer>
         <p>© 2023 Elaine Conceição. Todos os direitos reservados.</p>
     </footer>
+    <script>
+  const botao = document.getElementById('toggleProjetos');
+  const extras = document.querySelectorAll('.projeto.extra');
+  let mostrando = false;
+
+  botao.addEventListener('click', () => {
+    mostrando = !mostrando;
+    extras.forEach(card => {
+      if (mostrando) {
+        card.classList.add('show');
+      } else {
+        card.classList.remove('show');
+      }
+    });
+    botao.textContent = mostrando ? 'Ver menos projetos' : 'Ver mais projetos';
+  });
+</script>
+
 </body>
 </html>

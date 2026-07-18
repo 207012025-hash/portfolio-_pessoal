@@ -143,3 +143,15 @@ footer {
     font-size: 1em;
   }
 }
+/* Projetos extras escondidos por padrão */
+.projeto.extra {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Classe para mostrar */
+.projeto.extra.show {
+  display: block;
+  opacity: 1;
+}
